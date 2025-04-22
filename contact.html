@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Hotel BT is the most extraordinary hotel in the Boston, MA area." />
+    <meta name="keywords" content="hotel, boston hotel, new england hotel, hotel bt" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous" />
+    <title>Hotel YK | Contact</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        
+        #navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover,
+        nav ul li a.current {
+            color: #f4b400;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        #contact-form {
+            background: #fff;
+            margin: 2rem auto;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .l-heading {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .text-primary {
+            color: #f4b400;
+        }
+        
+        form .form-group {
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #f4b400;
+            outline: none;
+        }
+        
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background: #f4b400;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #e0a800;
+        }
+        
+        #contact-info {
+            background: #222;
+            color: #fff;
+            display: flex;
+            justify-content: space-around;
+            padding: 3rem 0;
+            flex-wrap: wrap;
+            animation: fadeIn 1.2s ease;
+        }
+        
+        #contact-info .box {
+            text-align: center;
+            margin: 20px;
+        }
+        
+        #contact-info i {
+            color: #f4b400;
+            margin-bottom: 10px;
+        }
+        
+        #main-footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            #contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header/Main -->
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <h1 class="logo"><a href="index.html">HYK</a></h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="current" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Form -->
+    <section id="contact-form">
+        <div class="container">
+            <h1 class="l-heading"><span class="text-primary">Contact</span> Us</h1>
+            <p>Please don't hesitate to fill out the form below to contact us:</p>
+            <form action="process.php" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" required />
+                </div>
+                <div class="form-group">
+                    <label for="inquiry">Inquiry Type</label>
+                    <select name="inquiry" id="inquiry" required>
+            <option value="">-- Please choose an option --</option>
+            <option value="booking">Room Booking</option>
+            <option value="service">Customer Service</option>
+            <option value="general">General Question</option>
+          </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section id="contact-info">
+        <div class="container">
+            <div class="box">
+                <i class="fas fa-hotel fa-3x"></i>
+                <h3>Location</h3>
+                <p>India</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-phone fa-3x"></i>
+                <h3>Phone Number</h3>
+                <p>+91 7082859138</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-envelope fa-3x"></i>
+                <h3>Email Address</h3>
+                <p>frontdesk@hotelyk.co</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="main-footer">
+        <p>Hotel YK &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script>. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
